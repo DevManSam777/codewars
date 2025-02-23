@@ -14,25 +14,31 @@
 
 
 function openOrSenior(data) {
-    let membershipType = []; // Initialize membershipType outside the loop
+    // let membershipType = []; // Initialize membershipType outside the loop
 
     // loop through the data array 
-    for (let i = 0; i < data.length; i++) {
+    // for (let i = 0; i < data.length; i++) {
  
-        // determine if a member is over 55 and has a handicap above 7 they are a Senior member
-        if (data[i][0] >= 55 && data[i][1] > 7) {
+    //     // determine if a member is over 55 and has a handicap above 7 they are a Senior member
+    //     if (data[i][0] >= 55 && data[i][1] > 7) {
 
-            // true Senior member so push "Senior" to membershipType array
-            membershipType.push("Senior");
+    //         // true Senior member so push "Senior" to membershipType array
+    //         membershipType.push("Senior");
 
-        } else {
-            // false they have an "Open" membership so push "Open" membershipType array
-            membershipType.push("Open");
-        }
-    }
+    //     } else {
+    //         // false they have an "Open" membership so push "Open" membershipType array
+    //         membershipType.push("Open");
+    //     }
+    // }
     // return membershipType array outside of loop
-    return membershipType;
-}
+    // return membershipType;
+
+    return data.map((e) => e[0] >= 55 && e[1] > 7 ? "Senior" : "Open");
+
+    }
+    
+   
+
 
 
 console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]]));
