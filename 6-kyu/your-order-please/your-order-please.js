@@ -18,7 +18,7 @@ function order(words) {
             orderedArray[position - 1] = word;
         }
         // join 'orderedArray' into a string using spaces.
+        // return the resulting string.
         return orderedArray.join(" ");
-    }
-    // 8. Return the resulting string.
+    }  
 }
