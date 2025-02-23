@@ -10,7 +10,7 @@
 
 
 //  Convert animal string to lower case
-// If animal is "alligartor" return "small"
+// If animal is "alligator" return "small"
 // Else return "wide"
 
 const mouthSize = (animal) => animal.toLowerCase() === "alligator" ? "small" : "wide"
