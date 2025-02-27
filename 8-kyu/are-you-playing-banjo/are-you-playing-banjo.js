@@ -1,11 +1,8 @@
 const areYouPlayingBanjo = (name) => {
-  // create regex for r, case insensitive
-  const r = /r/i;
-  // use search method on name string to see if r is present at the first index (0)
-  return name.search(r) === 0 
-  // if it is present return '<name> plays banjo'
+  // check to see if name starts with R, case insensitive
+  // if the name begins with R, return '<name> plays banjo'
+  // if the name does not being with R, return '<name> does not play banjo'
+    return name[0].toUpperCase() === 'R' 
     ? name.concat(' plays banjo')
-  // if it is not present return '<name> does not play banjo'
     : name.concat(' does not play banjo')
 }
-​
