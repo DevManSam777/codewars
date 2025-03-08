@@ -1,0 +1,1 @@
+<h2><a href=https://www.codewars.com/kata/58261acb22be6e2ed800003a/train/javascript target="_blank">Volume of a Cuboid</a></h2><h3>8 kyu</h3><p>Bob needs a fast way to calculate the volume of a cuboid with three values: the <code>length</code>, <code>width</code> and <code>height</code> of the cuboid. Write a function to help Bob with this calculation.</p>
