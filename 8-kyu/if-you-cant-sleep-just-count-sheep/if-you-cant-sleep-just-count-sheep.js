@@ -1,11 +1,10 @@
 var countSheep = function (num){
-  // intialize an array variable
-    let  sheepArr= []
-  // countdown with loop and add each iteration to the left of the previous
-    for (let i = num; i > 0; i--) {
-      sheepArr.unshift(`${i} sheep...`)
-    }  
-  // return as a string
-    return sheepArr.join("");
-  } 
-​
+  // initialize an empty string variable
+  let str = "";
+  // for loop 
+  for(let i = 1; i <= num; i++) { 
+      str+= `${i} sheep...`; 
+  }
+  // retun the string variable
+  return str;
+}
