@@ -1,4 +1,13 @@
 function printerError(s) {
+  // only letters a - m are colors and anything else is an error
+  // replace all colors in the string with ""
+  // return a string consisting of the string length, which will be composed of only errors, over the string length
+  
+  return `${s.replace(/[a-m]/g, "").length}/${s.length}`
+  }
+​
+/*
+function printerError(s) {
     // create a regex of letters between a-m 
     const colorRegex = /[a-m]/gi
     // initialize a denominator variable and set it to the length of the string
@@ -16,3 +25,4 @@ function printerError(s) {
     return `${error}/${denominator}`
     // return a string with the errors / denominator
 }
+*/
