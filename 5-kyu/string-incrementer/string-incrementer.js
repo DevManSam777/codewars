@@ -1,7 +1,7 @@
 function incrementString(string) {
   // initialize a regex variable that will match 0 or more digits at the end of the string
   let trailingRegex = /(\d*)$/;
-  // use the replace method on the string, with the regex as the pattern and the replacement set a callback
+  // use the replace method on the string, with the regex as the pattern and the replacement set to a callback
   // return
   // the callback recieves the matched digits as an arguement
   return string.replace(trailingRegex, function(trailingDigits) {
@@ -20,4 +20,3 @@ function incrementString(string) {
     return (Number(trailingDigits) + 1).toString().padStart(trailingDigits.length, "0");
     });
   };
-​
