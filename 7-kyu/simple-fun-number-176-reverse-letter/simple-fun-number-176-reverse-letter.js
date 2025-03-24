@@ -1,8 +1,7 @@
 function reverseLetter(str) {
-  // use replace with regex to replace non-word characters and numbers to empty string
-  // split into array
-  // reverse array
-  // join back to string
+  // any non-alphabet characters with an empty string
+  // split into array, reverse, join back to array 
   // return
-  return str.replace(/[\W.\d.\s._]/g, "").split("").reverse().join("")
+  return str.replace(/[^a-z]/g, "").split("").reverse().join("")
+  
 }
