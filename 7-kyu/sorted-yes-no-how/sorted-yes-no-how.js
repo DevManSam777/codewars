@@ -1,30 +1,23 @@
 function isSortedAndHow(array) {
-   
-  // initialize two variables as flags for ascending and descending and set them both to true
-  
-  let Ascending = true;
-  let Descending = true;
-  
-  // make a for loop the that starts iterating at the second index (1); 
-  
-  for (let i = 1; i < array.length; i ++) {
-      // write a conditional - if the current index is less than the index -1 then set Ascending to False;
-      
-    if (array[i] < array[i - 1]) {
-      Ascending = false;
-    }
-        // write another conditional - if the current index is greater than the index -1 then set Decending to False
-    if (array[i] > array[i - 1]){
-      Descending = false;
-    }
-  }
-  
-  // write another conditional with if - else if - and else for Ascending, Descending, and no
-    if (Ascending){
+    // initialize a variable of the array converted to string using join()
+    let arrayToString = array.join("");
+    // use a comparison operator to see if the array converted to a string, sorted low to high
+    if(array.sort((a,b)=> a- b).join("") === arrayToString) {
       return "yes, ascending"
-    } else if (Descending){
-      return "yes, descending"
-    } else {
-      return "no"
+    }
+    // and joined is equal to the variable we initialized
+    // if it is return "yes, ascending"
+    
+    // use another comparison operator to see if the array converted to a string and sorted 
+  
+      else if (array.sort((a,b) => b - a).join("") === arrayToString){
+        return "yes, descending"
+      }
+    //  high to low is equal the the variable we initialized
+    // if it is return "no, descending"
+  
+    // else return "no"
+    else {
+      return "no";
     }
 }
