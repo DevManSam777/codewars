@@ -1,37 +1,30 @@
 function isSortedAndHow(array) {
-//   // Check if the array is sorted in ascending order
-//   if (array.every((val, index, arr) => index === 0 || arr[index - 1] <= val)) {
-//     return "yes, ascending";
-//   }
+   
+  // initialize two variables as flags for ascending and descending and set them both to true
   
-//   // Check if the array is sorted in descending order
-//   if (array.every((val, index, arr) => index === 0 || arr[index - 1] >= val)) {
-//     return "yes, descending";
-//   }
-​
-//   // If the array is neither ascending nor descending
-//   return "no";
+  let Ascending = true;
+  let Descending = true;
   
-​
-  let isAscending = true;
-  let isDescending = true;
-​
-  // Loop through the array to check for ascending and descending order
-  for (let i = 1; i < array.length; i++) {
+  // make a for loop the that starts iterating at the second index (1); 
+  
+  for (let i = 1; i < array.length; i ++) {
+      // write a conditional - if the current index is less than the index -1 then set Ascending to False;
+      
     if (array[i] < array[i - 1]) {
-      isAscending = false;  // If an element is smaller than the previous one, it's not ascending
+      Ascending = false;
     }
-    if (array[i] > array[i - 1]) {
-      isDescending = false;  // If an element is larger than the previous one, it's not descending
+        // write another conditional - if the current index is greater than the index -1 then set Decending to False
+    if (array[i] > array[i - 1]){
+      Descending = false;
     }
   }
-​
-  // Based on the checks, return the appropriate result
-  if (isAscending) {
-    return "yes, ascending";
-  } else if (isDescending) {
-    return "yes, descending";
-  } else {
-    return "no";
-  }
+  
+  // write another conditional with if - else if - and else for Ascending, Descending, and no
+    if (Ascending){
+      return "yes, ascending"
+    } else if (Descending){
+      return "yes, descending"
+    } else {
+      return "no"
+    }
 }
