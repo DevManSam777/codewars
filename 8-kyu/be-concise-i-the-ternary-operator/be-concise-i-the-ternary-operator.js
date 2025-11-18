@@ -1,6 +1,14 @@
 // TODO: Refactor and shorten the function
-​
-function describeAge(a) {
-  return `You're a(n) ${a<=12 ? `kid`: a>=13 && a<=17 ? `teenager`: a>=18 && a<=64? `adult`: `elderly`}`
+const describeAge=(age)=>{
+ return `You're a(n) ${
+age > 64 
+? 'elderly'
+: age > 17 
+? 'adult'
+: age > 12
+? 'teenager'
+: 'kid'
+}` 
 }
+​
 ​
