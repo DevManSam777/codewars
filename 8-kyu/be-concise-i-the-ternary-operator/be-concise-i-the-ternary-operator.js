@@ -1,3 +1,6 @@
 // TODO: Refactor and shorten the function
 ​
-const describeAge=(b)=>{let a=`You're a(n)`;return b<=12?`${a} kid`:b>=13&&b<=17?`${a} teenager`:b>=18&&b<=64?`${a} adult`:`${a} elderly`}
+function describeAge(a) {
+  return `You're a(n) ${a<=12 ? `kid`: a>=13 && a<=17 ? `teenager`: a>=18 && a<=64? `adult`: `elderly`}`
+}
+​
