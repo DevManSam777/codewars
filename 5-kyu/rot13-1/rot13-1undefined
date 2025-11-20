@@ -1,0 +1,46 @@
+function rot13(str) {
+  
+  return str.split('') 
+  // convert to array and map over it to cypher letters (leave non letter as is)
+    .map(char => {
+      // process each character one at a time
+      
+      // get the ASCII code of the current character
+      // use charCodeAt() string method
+      // since char is just one letter, position 0 is that letter
+      let charCode = char.charCodeAt(0);
+      
+      
+      // Is it uppercase? uppercase ascii codes 65-90
+      // since uppercase ascii start with 65 (A), 
+      if (charCode >= 65 && charCode <= 90) {
+        // the position will be the charCode - 65 (0-25 "A" being zero and "Z" being 25)
+        let alphabetPosition = charCode - 65;
+        // now we want to shift it 13 characters ex. A = 0 would become n = 13
+        let newPosition = alphabetPosition + 13;
+        // we use the modulus operator to see if it needs to wrap, if there are more than 13
+        // characters left, it won't wrap, if there are less it will use the remainder 
+        // ex. N (position 13) + 13 = 26, then 26 % 26 = 0, which is A
+        let wrappedPosition = newPosition % 26;
+        // the new character code after the shift is the modulus result + 65
+        let newCharCode = wrappedPosition + 65;
+        // we need to turn this back into a letter, so if it was 0 that would become A
+        return String.fromCharCode(newCharCode);
+      } 
+      // is it lowercase? lowercase ascii codes 97-122
+      // Same as above but lower case ascii codes
+      else if (charCode >= 97 && charCode <= 122) {
+        let alphabetPosition = charCode - 97;
+        let newPosition = alphabetPosition + 13;
+        let wrappedPosition = newPosition % 26;
+        let newCharCode = wrappedPosition + 97;
+        return String.fromCharCode(newCharCode);
+      } 
+      else {
+        // not a letter return char as is
+        return char;
+      }
+    })
+    // join back into string
+    .join('');
+}
