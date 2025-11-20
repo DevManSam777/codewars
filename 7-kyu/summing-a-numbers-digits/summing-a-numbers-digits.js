@@ -15,6 +15,5 @@ function sumDigits(number) {
   // use reduce to get the sum
   let sumOfNums = numArray.reduce((acc, num) => acc += num)
   console.log(sumOfNums);
-  return sumOfNums;
+  return sumOfNums
 }
-​
