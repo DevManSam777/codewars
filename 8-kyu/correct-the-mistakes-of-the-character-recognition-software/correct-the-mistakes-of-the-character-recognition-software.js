@@ -1,8 +1,4 @@
-function correct(string) {
-  return string.replace(/[150]/g, (match) => 
-    match === "1" 
-      ? "I" 
-    : match === "5" 
-      ? "S"
-      : "O"
-)};
+function correct(string){ 
+  return string.split('')
+    .map(char => char === '1' ? 'I' : char === '5' ? 'S' : char === '0' ? 'O': char).join('')
+}
