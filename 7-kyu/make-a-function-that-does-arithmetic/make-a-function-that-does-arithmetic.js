@@ -1,11 +1,6 @@
-function arithmetic(a, b, op){
-  const ops = {
-    add: "+",
-    subtract: "-",
-    multiply: "*",
-    divide: "/",
-  }
-  
-  return eval(`${a} ${ops[op]} ${b}`)
-  
-}
+const arithmetic = (a, b, op) => ({
+    add: a + b,
+    subtract: a - b,
+    multiply: a * b,
+    divide: a / b,
+  }[op])
