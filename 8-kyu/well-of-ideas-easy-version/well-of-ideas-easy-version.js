@@ -1,4 +1,5 @@
 function well(x){
-  let string = x.join(' ');
-  return !(/good/).test(string) ? 'Fail!' : (string.indexOf('good') === string.lastIndexOf('good')) || string.match(/good/g).length === 2 ? 'Publish!' : 'I smell a series!' 
+  let good = x.filter(x => x === 'good').length;
+  
+  return good < 1 ? 'Fail!' : good < 3 ? 'Publish!' : 'I smell a series!'
 }
