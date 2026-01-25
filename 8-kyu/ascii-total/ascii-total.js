@@ -1,3 +1,3 @@
 function uniTotal (string) {
-  return string.split('').map(char=> Number(char.charCodeAt(0))).reduce((acc,curr)=>acc + curr, 0)
+  return string.split('').reduce((acc,curr)=> acc + curr.charCodeAt(0), 0)
 }
