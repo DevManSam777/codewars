@@ -1,3 +1,3 @@
 function sumOfIntegersInString(s) {
-  return s.split(/[^\d]+/).reduce((acc,curr)=> acc + Number(curr), 0)
+  return s.split(/\D+/).reduce((acc,curr)=> acc + (+curr), 0)
 }
