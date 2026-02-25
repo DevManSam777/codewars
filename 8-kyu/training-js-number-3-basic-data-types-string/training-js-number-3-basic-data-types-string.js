@@ -9,7 +9,7 @@ function Bee(){
 }
 function banana(){
   //select some variable to combine "banana"
-  return b2 + a2 + n2 + a2 + n2 + a2
+  return b2 + a2 + n2 + a2 + n2 + a2;
 }
 ​
 //answer some questions if you finished works above
